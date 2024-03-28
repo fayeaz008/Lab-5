@@ -1,0 +1,43 @@
+{
+    "name": "calculator",
+    "version": "1.0.0",
+    "description": "Description of your project",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "collectCoverage": true,
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "jsx",
+            "ts",
+            "tsx",
+            "node"
+        ],
+        "transform": {
+            "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+        },
+        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx,ts,tsx}",
+            "!<rootDir>/node_modules/"
+        ],
+        "coverageReporters": [
+            "text",
+            "lcov"
+        ],
+        "coverageDirectory": "./code-coverage-report/",
+        "reporters": [
+            "default",
+            "./node_modules/jest-html-reporters"
+        ]
+    },
+    "devDependencies": {
+        "babel-jest": "^27.0.6",
+        "jest": "^27.5.1",
+        "jest-html-reporters": "^3.1.7"
+    }
+}
