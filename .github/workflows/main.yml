@@ -1,0 +1,17 @@
+name: JavaScript CI/CD Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  unit_tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # Choose the node version that matches your project
+    - name: Install dependencies
+      run: npm install
+    - name: Run unit tests
+      run: npm run test:unit # Replace with your unit test script
